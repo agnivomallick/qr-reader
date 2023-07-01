@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0075eb;
+}
+
+.wrapper {
+    background-color: #fff;
+    height: 398px;
+    width: 500px;
+    border-radius: 5px;
+    padding: 24px 36px 42px;
+}
+/*
+.wrapper.active (When the image is loaded)
+*/
+
+.wrapper.active {
+    height: 600px;
+    transition: height 0.5s 0.005s ease;
+}
+.wrapper header {
+    text-align: center;
+    font-size: 43px;
+    font-weight: 700;
+}
+
+.wrapper .upload form {
+    border: 4px dashed #ccc;
+    height: 270px;
+    width: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    margin-top: 6px;
+}
+
+
+.wrapper.active .upload {
+    height: 320px;
+    pointer-events: auto;
+}
+
+.wrapper .upload form i {
+    font-size: 90px;
+    color: #0075eb;
+}
+
+.wrapper .upload form p {
+    font-size: 36px;
+    font-weight: 500;
+}
+.wrapper .upload form img {
+    display: none;
+}
+.wrapper.active .upload form i {
+    display: none;
+}
+.wrapper.active .upload form p {
+    display: none;
+}
+
+.wrapper.active .upload form img {
+    display: block;
+}
+
+.wrapper textarea {
+    font-size: 25px;
+    text-align: center;
+    margin-top:18px;
+    resize: none;
+    display: none;
+    width: 440px;
+    height: 99px;
+    border: 1px solid #bfbfbf;
+}
+
+.wrapper.active textarea {
+    display: block;
+}
+
+.wrapper .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    opacity: 0;
+}
+
+.wrapper .btns button {
+    height: 44px;
+    width: 86px;
+    background-color: #0075eb;
+    color: #fff;
+    border: none;
+    transition: opacity 0.4s ease;
+    cursor: pointer;
+    pointer-events: none;
+    border-radius: 5px;
+}
+
+.wrapper .btns button:hover {
+    opacity: 0.7;
+}
+
+.wrapper.active .btns {
+    opacity: 1;
+}
+
+.wrapper.active .btns button {pointer-events: auto;}
